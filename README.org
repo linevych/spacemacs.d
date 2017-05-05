@@ -1,0 +1,2 @@
+* Very own Spacemacs configuration
+Here store my [[http://spacemacs.org][Spacemacs]] config for everyday work, blogging and so one.
