@@ -32,13 +32,20 @@
 (defconst writing-packages
   '(writeroom-mode
     markdown-mode
-    )
+    textile-mode)
   "Layer requirements")
 
+(defun writing-mode-settings ()
+  "Basic buffer settings for comfort writing."
 
-;;; Line wrapping
-(turn-on-fci-mode)
-(setq-default fill-column 100)
-(setq-default writeroom-width fill-column)
+  ;; Line wrapping settings
+  (turn-on-fci-mode)
+  (setq-local fill-column 100)
+  (setq-local writeroom-width fill-column))
+
+(add-hook 'org-mode-hook 'writing-mode-settings)
+(add-hook 'markdown-mode-hook 'writing-mode-settings)
+(add-hook 'textile-mode 'writing-mode-setting)
+(add-hook 'rst-mode-hook 'writing-mode-setting)
 
 ;;; packages.el ends here
